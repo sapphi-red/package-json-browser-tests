@@ -75,9 +75,9 @@ node_modules/pkg/file.js:
 </pre></td>
 <td>✅</td>
 <td>✅</td>
+<td>🚫</td>
 <td>✅</td>
-<td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
   require('pkg/foo/bar')
@@ -163,7 +163,7 @@ node_modules/pkg/file.js:
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
   require('pkg')
@@ -285,7 +285,7 @@ node_modules/pkg/file.js:
 <td>🚫</td>
 <td>✅</td>
 <td>🚫</td>
-<td>🚫</td>
+<td>✅</td>
 </tr>
 <tr><td><pre>entry.js:
   require('pkg/dir')
@@ -296,7 +296,7 @@ node_modules/pkg/file.js:
 </pre></td>
 <td>✅</td>
 <td>🚫</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 <td>🚫</td>
 </tr>
@@ -309,7 +309,7 @@ node_modules/pkg/file.js:
 </pre></td>
 <td>✅</td>
 <td>🚫</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 <td>🚫</td>
 </tr>
@@ -325,7 +325,7 @@ node_modules/pkg/file.js:
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
@@ -340,7 +340,7 @@ node_modules/pkg/file.js:
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
@@ -361,7 +361,7 @@ node_modules/pkg/lib/fail.js:
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
@@ -375,8 +375,8 @@ node_modules/pkg/foo/baz.js:
 </pre></td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
-<td>✅</td>
+<td>🚫</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
@@ -393,7 +393,7 @@ node_modules/sub/bar.js:
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
@@ -429,7 +429,7 @@ node_modules/sub/index.js:
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td><pre>entry.js:
@@ -472,16 +472,16 @@ node_modules/baz/index.js:
 </pre></td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
-<td>✅</td>
+<td>🚫</td>
+<td>🚫</td>
 <td>🚫</td>
 </tr>
 <tr><td>Percent handled:</td>
 <td>100.0%</td>
 <td>76.7%</td>
-<td>73.3%</td>
-<td>63.3%</td>
-<td>23.3%</td>
+<td>56.7%</td>
+<td>40.0%</td>
+<td>20.0%</td>
 </tr>
 </table>
 

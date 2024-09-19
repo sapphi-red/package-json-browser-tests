@@ -374,7 +374,8 @@ const bundlers = {
 function reset() {
   fs.rmSync(inDir, { recursive: true, force: true })
   fs.rmSync(outDir, { recursive: true, force: true })
-  fs.rmSync(parcelCacheDir, { recursive: true, force: true })
+  // comment out as it errors with EBUSY
+  // fs.rmSync(parcelCacheDir, { recursive: true, force: true, maxRetries: 10 })
 }
 
 function setup(test) {
