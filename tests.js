@@ -256,6 +256,7 @@ const parcel = require('@parcel/core')
 const rollup = require('rollup')
 const pluginNodeResolve = require('@rollup/plugin-node-resolve')
 const pluginCommonJS = require('@rollup/plugin-commonjs')
+const vite = require('vite')
 const inDir = path.join(__dirname, 'in')
 const outDir = path.join(__dirname, 'out')
 const parcelCacheDir = path.join(__dirname, '.parcel-cache')
@@ -369,6 +370,35 @@ const bundlers = {
     }
     return err
   },
+
+  async vite() {
+    let err
+    try {
+      const { output } = await vite.build({
+        build: {
+          rollupOptions: {
+            input: path.join(inDir, 'entry.js'),
+            onwarn: x => { throw new Error(x) },
+            output: {
+              format: 'iife',
+              name: 'name',
+            },
+          },
+          commonjsOptions: {
+            include: [/./]
+          },
+          write: false,
+        },
+        logLevel: 'silent',
+      })
+      const input = {}
+      new Function('input', output[0].code)(input)
+      if (!input.works) throw new Error('Expected "works"')
+    } catch (e) {
+      err = e
+    }
+    return err
+  }
 }
 
 function reset() {
