@@ -131,6 +131,12 @@ const positiveTests = [
   },
   {
     'entry.js': `require('pkg')`,
+    'node_modules/pkg/package.json': `{ "main": "main.js", "browser": { "./dir/index.js": "./file" } }`,
+    'node_modules/pkg/main.js': `require('./dir')`,
+    'node_modules/pkg/file.js': `input.works = true`,
+  },
+  {
+    'entry.js': `require('pkg')`,
     'package.json': `{ "browser": { "./index.js": "./fail.js" } }`,
     'fail.js': `throw 'fail'`,
     'node_modules/pkg/main.js': `require('./lib')`,

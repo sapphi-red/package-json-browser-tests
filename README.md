@@ -368,6 +368,22 @@ node_modules/pkg/file.js:
 </tr>
 <tr><td><pre>entry.js:
   require('pkg')
+node_modules/pkg/package.json:
+  { "main": "main.js", "browser": { "./dir/index.js": "./file" } }
+node_modules/pkg/main.js:
+  require('./dir')
+node_modules/pkg/file.js:
+  input.works = true
+</pre></td>
+<td>✅</td>
+<td>🚫</td>
+<td>✅</td>
+<td>🚫</td>
+<td>🚫</td>
+<td>🚫</td>
+</tr>
+<tr><td><pre>entry.js:
+  require('pkg')
 package.json:
   { "browser": { "./index.js": "./fail.js" } }
 fail.js:
@@ -508,10 +524,10 @@ node_modules/baz/index.js:
 </tr>
 <tr><td>Percent handled:</td>
 <td>100.0%</td>
-<td>76.7%</td>
-<td>70.0%</td>
-<td>56.7%</td>
-<td>20.0%</td>
+<td>74.2%</td>
+<td>71.0%</td>
+<td>54.8%</td>
+<td>19.4%</td>
 <td>NaN%</td>
 </tr>
 </table>
